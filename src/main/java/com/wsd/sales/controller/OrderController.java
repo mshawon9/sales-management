@@ -20,4 +20,10 @@ public class OrderController {
 
         return orderService.getOrderListOfCurrentDay();
     }
+
+    @GetMapping("/total-amount-current-day")
+    public Double getTotalAmountCurrentDay() {
+
+        return orderService.getTotalSaleAmountOfCurrentDay();
+    }
 }

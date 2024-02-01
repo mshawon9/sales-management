@@ -28,8 +28,10 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public double getTotalSaleAmountOfCurrentDay() {
-        return 0;
+    public Double getTotalSaleAmountOfCurrentDay() {
+        List<OrderModel> orders = getOrderListOfCurrentDay();
+
+        return orders.stream().mapToDouble(OrderModel::getTotal).sum();
     }
 
     @Override

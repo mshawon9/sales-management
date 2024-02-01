@@ -8,7 +8,7 @@ import java.util.List;
 public interface OrderService {
     List<OrderModel> getOrderListOfCurrentDay();
     List<OrderModel> getOrderListOfSingleCustomer();
-    double getTotalSaleAmountOfCurrentDay();
+    Double getTotalSaleAmountOfCurrentDay();
 
     String getMaximumSaleDayByTimeRange(LocalDateTime from, LocalDateTime to);
 }
