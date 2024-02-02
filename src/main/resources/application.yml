@@ -1,9 +1,9 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://mysqlserver/sales?createDatabaseIfNotExist=true
+    url: jdbc:mysql://localhost:3306/sales?createDatabaseIfNotExist=true
     username: mehedi
-    password: sales
+    password: admin
   jpa:
     properties:
       hibernate:
