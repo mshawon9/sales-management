@@ -2,13 +2,14 @@ package com.wsd.sales.service;
 
 import com.wsd.sales.model.OrderModel;
 
-import java.time.LocalDateTime;
+import java.text.ParseException;
+import java.time.LocalDate;
 import java.util.List;
 
 public interface OrderService {
     List<OrderModel> getOrderListOfCurrentDay();
-    List<OrderModel> getOrderListOfSingleCustomer();
+
     Double getTotalSaleAmountOfCurrentDay();
 
-    String getMaximumSaleDayByTimeRange(LocalDateTime from, LocalDateTime to);
+    List<LocalDate> getMaximumSaleDayByTimeRange(String from, String to) throws ParseException;
 }
